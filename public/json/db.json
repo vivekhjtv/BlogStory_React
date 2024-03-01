@@ -1,0 +1,429 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vivek",
+      "role": "vivekjethva18@gmail.com",
+      "about": "Hello, I'm Vivek Jethva, a Full Stack developer currently pursuing my postgraduate degree in Information Technology and Solutions at Humber College. I previously worked as a web developer at Meetanshi, gaining hands-on experience in frontend development. I possess expertise in React JS, JavaScript, Bootstrap, and Material UI on the frontend, as well as NodeJS, ExpressJS, and RESTful API on the backend. I am eager to explore the MERN Stack and aim to secure a position as a Full Stack developer in a reputable company. My ultimate goal is to secure a position as a Full Stack developer in a well-established company where I can not only hone my skills but also actively contribute to the success and growth of the organization.",
+      "image": "https://source.unsplash.com/random",
+      "blogs": [
+        {
+          "title": "Vivek",
+          "content": "vivekjethva18@gmail.com",
+          "id": 1
+        },
+        {
+          "title": "Json Fetch",
+          "content": "How to fetch json data using api",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 2
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 3
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 4
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 5
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 6
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 3
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 7
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 8
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 9
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 10
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 11
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 12
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 13
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 14
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 15
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 16
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 17
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 18
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 19
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 20
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 21
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 22
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 23
+    },
+    {
+      "name": "Vivek",
+      "lastName": "Jethva",
+      "role": "vivekjethva184@gmail.com",
+      "password": "Vivek@123",
+      "image": "https://source.unsplash.com/random",
+      "id": 24
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "React",
+      "content": "React is a JavaScript library for building user interfaces. React is used to build single-page applications.React allows us to create reusable UI components.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology - React"
+    },
+    {
+      "id": 2,
+      "title": "React Class Components 1",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology"
+    },
+    {
+      "id": 3,
+      "title": "React Class Components 2",
+      "content": "Components are independent and reusable bits of code. Tut work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.Components are independent and reusable bits of code. Class components and Function component.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology"
+    },
+    {
+      "id": 4,
+      "title": "React Class Components 3",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology"
+    },
+    {
+      "id": 5,
+      "title": "React Class Components 2",
+      "content": "Components are independent and reusable bits of code. Tut work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.Components are independent and reusable bits of code. Class components and Function component.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology"
+    },
+    {
+      "id": 6,
+      "title": "React Class Components 3",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random",
+      "category": "Technology"
+    }
+  ],
+  "catagories": [
+    {
+      "id": 1,
+      "title": "React",
+      "content": "React is a JavaScript library for building user interfaces. React is used to build single-page applications.React allows us to create reusable UI components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 2,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 3,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 4,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 5,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 6,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 7,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 8,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 9,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 10,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 11,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 12,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 13,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 14,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 15,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 16,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 17,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 18,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 19,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 20,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 21,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 22,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 23,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 24,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 25,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 26,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 27,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    },
+    {
+      "id": 28,
+      "title": "React Class Components",
+      "content": "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML via a render() function. Components come in two types, Class components and Function components, in this chapter you will learn about Class components.",
+      "image": "https://source.unsplash.com/random"
+    }
+  ]
+}
