@@ -20,7 +20,7 @@ import {
   Button,
   styled,
 } from '@mui/material';
-import { deleteBlog, getBlogsData } from '../../api';
+import { deleteCategory, getCatagoriesData } from '../../api';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -41,15 +41,15 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function AdminBlogs() {
-  const [blogs, setBlogs] = useState([]);
+function AdminCategories() {
+  const [categories, setCategories] = useState([]);
   const [dataFetched, setDataFetched] = useState(false);
-  const [editableBlogId, setEditableBlogId] = useState(null);
+  const [editableCategoryId, setEditableCategoryId] = useState(null);
 
   const fetchData = async () => {
     try {
-      const data = await getBlogsData();
-      setBlogs(data);
+      const data = await getCatagoriesData();
+      setCategories(data);
       setDataFetched(true);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -62,22 +62,24 @@ function AdminBlogs() {
     }
   }, [dataFetched]);
 
-  const handleEdit = (blogId) => {
-    setEditableBlogId(blogId);
+  const handleEdit = (categoryId) => {
+    setEditableCategoryId(categoryId);
   };
 
-  const handleSave = (blogId) => {
-    setEditableBlogId(null);
-    // You can add logic here to save the edited blog data (if needed).
+  const handleSave = (categoryId) => {
+    setEditableCategoryId(null);
+    // You can add logic here to save the edited category data (if needed).
   };
 
-  const handleDelete = async (blogId) => {
+  const handleDelete = async (categoryId) => {
     try {
-      await deleteBlog(blogId);
-      const updatedBlogs = blogs.filter((blog) => blog.id !== blogId);
-      setBlogs(updatedBlogs);
+      await deleteCategory(categoryId);
+      const updatedCategories = categories.filter(
+        (category) => category.id !== categoryId
+      );
+      setCategories(updatedCategories);
     } catch (error) {
-      console.error('Error deleting blog:', error);
+      console.error('Error deleting category:', error);
     }
   };
 
@@ -96,7 +98,7 @@ function AdminBlogs() {
                 variant="h3"
                 sx={{ marginBottom: '30px', fontFamily: 'Protest Riot' }}
               >
-                Blogs
+                Categories
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -128,6 +130,7 @@ function AdminBlogs() {
             </Grid>
           </Grid>
         </Container>
+
         <Container sx={{ paddingTop: 2 }} maxWidth="lg">
           <Grid
             sx={{ marginRight: 6 }}
@@ -138,11 +141,11 @@ function AdminBlogs() {
             <Grid item>
               <Button
                 component={Link}
-                to="/admin/blog/add"
+                to="/admin/categories/add"
                 variant="contained"
                 endIcon={<PostAddIcon />}
               >
-                Add Blog
+                Add Category
               </Button>
             </Grid>
           </Grid>
@@ -154,13 +157,10 @@ function AdminBlogs() {
                 <TableHead>
                   <TableRow>
                     <StyledTableCell sx={{ fontSize: '18px' }}>
-                      Blog Title
+                      Category ID
                     </StyledTableCell>
                     <StyledTableCell sx={{ fontSize: '18px' }} align="left">
-                      Blog Description
-                    </StyledTableCell>
-                    <StyledTableCell sx={{ fontSize: '18px' }} align="left">
-                      Category
+                      Category Title
                     </StyledTableCell>
                     <StyledTableCell sx={{ fontSize: '18px' }} align="center">
                       Actions
@@ -168,74 +168,58 @@ function AdminBlogs() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {blogs.map((blog) => (
-                    <StyledTableRow key={blog.id}>
+                  {categories.map((category) => (
+                    <StyledTableRow key={category.id}>
                       <StyledTableCell component="th" scope="row">
-                        {editableBlogId === blog.id ? (
+                        {editableCategoryId === category.id ? (
                           <TextField
                             sx={{ width: '100%' }}
-                            value={blog.title}
+                            value={category.id}
                             onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, title: e.target.value }
-                                  : b
+                              const updatedCategories = categories.map((c) =>
+                                c.id === category.id
+                                  ? { ...c, id: e.target.value }
+                                  : c
                               );
-                              setBlogs(updatedBlogs);
+                              setCategories(updatedCategories);
                             }}
                           />
                         ) : (
-                          blog.title
+                          category.id
                         )}
                       </StyledTableCell>
                       <StyledTableCell align="left">
-                        {editableBlogId === blog.id ? (
+                        {editableCategoryId === category.id ? (
                           <TextField
                             sx={{ width: '100%' }}
-                            value={blog.content}
+                            value={category.title}
                             onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, content: e.target.value }
-                                  : b
+                              const updatedCategories = categories.map((c) =>
+                                c.id === category.id
+                                  ? { ...c, title: e.target.value }
+                                  : c
                               );
-                              setBlogs(updatedBlogs);
+                              setCategories(updatedCategories);
                             }}
                           />
                         ) : (
-                          blog.content.substring(0, 80) + '...'
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell align="left">
-                        {editableBlogId === blog.id ? (
-                          <TextField
-                            sx={{ width: '100%' }}
-                            value={blog.category}
-                            onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, category: e.target.value }
-                                  : b
-                              );
-                              setBlogs(updatedBlogs);
-                            }}
-                          />
-                        ) : (
-                          blog.category
+                          category.title
                         )}
                       </StyledTableCell>
                       <StyledTableCell align="center">
-                        {editableBlogId === blog.id ? (
+                        {editableCategoryId === category.id ? (
                           <Button
                             variant="text"
-                            onClick={() => handleSave(blog.id)}
+                            color="primary"
+                            onClick={() => handleSave(category.id)}
                           >
                             Save
                           </Button>
                         ) : (
                           <Button
                             variant="text"
-                            onClick={() => handleEdit(blog.id)}
+                            onClick={() => handleEdit(category.id)}
+                            disabled={editableCategoryId !== null}
                           >
                             Edit
                           </Button>
@@ -243,7 +227,7 @@ function AdminBlogs() {
                         <Button
                           variant="text"
                           color="error"
-                          onClick={() => handleDelete(blog.id)}
+                          onClick={() => handleDelete(category.id)}
                         >
                           Delete
                         </Button>
@@ -260,4 +244,4 @@ function AdminBlogs() {
   );
 }
 
-export default AdminBlogs;
+export default AdminCategories;

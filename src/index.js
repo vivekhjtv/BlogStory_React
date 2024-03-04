@@ -6,7 +6,6 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AdminDashBoard from './Components/Router/AdminDashBoard';
 import User from './Components/Admin/User';
 import Blogs from './Components/Blogs';
-import Catagories from './Components/Catagories';
 import Profile from './Components/Router/Profile';
 import SignUp from './Components/Router/SignUp';
 import SignIn from './Components/Router/SignIn';
@@ -19,6 +18,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UserLayout from './Components/User/UserLayout';
 import AdminBlogs from './Components/Admin/AdminBlogs';
+import AdminCategories from './Components/Admin/AdminCategories';
+import AdminUser from './Components/Admin/AdminUser';
 
 const router = createBrowserRouter([
   {
@@ -64,12 +65,12 @@ const router = createBrowserRouter([
         Component: AdminBlogs,
       },
       {
-        path: 'users',
-        Component: User,
+        path: 'adminUser',
+        Component: AdminUser,
       },
       {
-        path: 'catagories',
-        Component: Catagories,
+        path: 'adminCategories',
+        Component: AdminCategories,
       },
       {
         path: 'blog/add',

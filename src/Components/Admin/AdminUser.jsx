@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import PostAddIcon from '@mui/icons-material/PostAdd';
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import { Link } from 'react-router-dom';
 import {
   Container,
@@ -20,7 +20,7 @@ import {
   Button,
   styled,
 } from '@mui/material';
-import { deleteBlog, getBlogsData } from '../../api';
+import { deleteUsers, getUserData } from '../../api';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -41,15 +41,16 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function AdminBlogs() {
-  const [blogs, setBlogs] = useState([]);
+function AdminUser() {
+  const [users, setUsers] = useState([]);
   const [dataFetched, setDataFetched] = useState(false);
-  const [editableBlogId, setEditableBlogId] = useState(null);
+  const [editableUserId, setEditableUserId] = useState(null);
 
   const fetchData = async () => {
     try {
-      const data = await getBlogsData();
-      setBlogs(data);
+      const data = await getUserData();
+      console.log(data);
+      setUsers(data);
       setDataFetched(true);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -62,22 +63,22 @@ function AdminBlogs() {
     }
   }, [dataFetched]);
 
-  const handleEdit = (blogId) => {
-    setEditableBlogId(blogId);
+  const handleEdit = (userId) => {
+    setEditableUserId(userId);
   };
 
-  const handleSave = (blogId) => {
-    setEditableBlogId(null);
-    // You can add logic here to save the edited blog data (if needed).
+  const handleSave = () => {
+    setEditableUserId(null);
+    // You can add logic here to save the edited user data (if needed).
   };
 
-  const handleDelete = async (blogId) => {
+  const handleDelete = async (userId) => {
     try {
-      await deleteBlog(blogId);
-      const updatedBlogs = blogs.filter((blog) => blog.id !== blogId);
-      setBlogs(updatedBlogs);
+      await deleteUsers(userId);
+      const updatedUsers = users.filter((user) => user.id !== userId);
+      setUsers(updatedUsers);
     } catch (error) {
-      console.error('Error deleting blog:', error);
+      console.error('Error deleting user:', error);
     }
   };
 
@@ -96,7 +97,7 @@ function AdminBlogs() {
                 variant="h3"
                 sx={{ marginBottom: '30px', fontFamily: 'Protest Riot' }}
               >
-                Blogs
+                Users
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -129,20 +130,15 @@ function AdminBlogs() {
           </Grid>
         </Container>
         <Container sx={{ paddingTop: 2 }} maxWidth="lg">
-          <Grid
-            sx={{ marginRight: 6 }}
-            container
-            justifyContent="flex-end"
-            spacing={2}
-          >
+          <Grid container justifyContent="flex-end" spacing={2}>
             <Grid item>
               <Button
                 component={Link}
-                to="/admin/blog/add"
+                to="/admin/user/add"
                 variant="contained"
-                endIcon={<PostAddIcon />}
+                endIcon={<PersonAddAltIcon />}
               >
-                Add Blog
+                Add User
               </Button>
             </Grid>
           </Grid>
@@ -154,13 +150,13 @@ function AdminBlogs() {
                 <TableHead>
                   <TableRow>
                     <StyledTableCell sx={{ fontSize: '18px' }}>
-                      Blog Title
+                      User ID
                     </StyledTableCell>
                     <StyledTableCell sx={{ fontSize: '18px' }} align="left">
-                      Blog Description
+                      User Name
                     </StyledTableCell>
                     <StyledTableCell sx={{ fontSize: '18px' }} align="left">
-                      Category
+                      User Email
                     </StyledTableCell>
                     <StyledTableCell sx={{ fontSize: '18px' }} align="center">
                       Actions
@@ -168,74 +164,61 @@ function AdminBlogs() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {blogs.map((blog) => (
-                    <StyledTableRow key={blog.id}>
+                  {users.map((user) => (
+                    <StyledTableRow key={user.id}>
                       <StyledTableCell component="th" scope="row">
-                        {editableBlogId === blog.id ? (
+                        {user.id}
+                      </StyledTableCell>
+                      <StyledTableCell align="left">
+                        {editableUserId === user.id ? (
                           <TextField
                             sx={{ width: '100%' }}
-                            value={blog.title}
+                            value={user.name}
                             onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, title: e.target.value }
-                                  : b
+                              const updatedUsers = users.map((u) =>
+                                u.id === user.id
+                                  ? { ...u, name: e.target.value }
+                                  : u
                               );
-                              setBlogs(updatedBlogs);
+                              setUsers(updatedUsers);
                             }}
                           />
                         ) : (
-                          blog.title
+                          user.name
                         )}
                       </StyledTableCell>
                       <StyledTableCell align="left">
-                        {editableBlogId === blog.id ? (
+                        {editableUserId === user.id ? (
                           <TextField
                             sx={{ width: '100%' }}
-                            value={blog.content}
+                            value={user.role}
                             onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, content: e.target.value }
-                                  : b
+                              const updatedUsers = users.map((u) =>
+                                u.id === user.id
+                                  ? { ...u, role: e.target.value }
+                                  : u
                               );
-                              setBlogs(updatedBlogs);
+                              setUsers(updatedUsers);
                             }}
                           />
                         ) : (
-                          blog.content.substring(0, 80) + '...'
-                        )}
-                      </StyledTableCell>
-                      <StyledTableCell align="left">
-                        {editableBlogId === blog.id ? (
-                          <TextField
-                            sx={{ width: '100%' }}
-                            value={blog.category}
-                            onChange={(e) => {
-                              const updatedBlogs = blogs.map((b) =>
-                                b.id === blog.id
-                                  ? { ...b, category: e.target.value }
-                                  : b
-                              );
-                              setBlogs(updatedBlogs);
-                            }}
-                          />
-                        ) : (
-                          blog.category
+                          user.role
                         )}
                       </StyledTableCell>
                       <StyledTableCell align="center">
-                        {editableBlogId === blog.id ? (
+                        {editableUserId === user.id ? (
                           <Button
                             variant="text"
-                            onClick={() => handleSave(blog.id)}
+                            color="primary"
+                            onClick={handleSave}
                           >
                             Save
                           </Button>
                         ) : (
                           <Button
                             variant="text"
-                            onClick={() => handleEdit(blog.id)}
+                            onClick={() => handleEdit(user.id)}
+                            disabled={editableUserId !== null}
                           >
                             Edit
                           </Button>
@@ -243,7 +226,7 @@ function AdminBlogs() {
                         <Button
                           variant="text"
                           color="error"
-                          onClick={() => handleDelete(blog.id)}
+                          onClick={() => handleDelete(user.id)}
                         >
                           Delete
                         </Button>
@@ -260,4 +243,4 @@ function AdminBlogs() {
   );
 }
 
-export default AdminBlogs;
+export default AdminUser;

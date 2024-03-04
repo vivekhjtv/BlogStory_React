@@ -25,10 +25,8 @@ import { ToastContainer } from 'react-toastify';
 const drawerWidth = 240;
 const paths = {
   'admin/adminBlogs': 'Blogs',
-  'admin/Catagories': 'Categories',
-  'admin/Users': 'Users',
-  'admin/catagories/add': 'Add Categories',
-  'admin/user/add': 'Add User',
+  'admin/adminCategories': 'Categories',
+  'admin/adminUser': 'Users',
 };
 export const Main = styled('main', {
   shouldForwardProp: (prop) => prop !== 'open',

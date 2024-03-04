@@ -39,36 +39,13 @@ function Blogs() {
   return (
     <div>
       <Grid container spacing={2}>
-        <Container
-          sx={{
-            '@media (max-width: 1600px)': {
-              paddingLeft: '0px',
-              paddingRight: '0px',
-              marginLeft: '100px',
-              marginRight: '100px',
-            },
-            '@media (max-width: 1024px)': {
-              paddingLeft: '0px',
-              paddingRight: '0px',
-              marginLeft: '60px',
-              marginRight: '60px',
-            },
-            '@media (max-width: 440px)': {
-              paddingLeft: '0px',
-              paddingRight: '0px',
-              marginLeft: '30px',
-              marginRight: '30px',
-            },
-          }}
-          maxWidth="lg"
-        >
+        <Container maxWidth="lg">
           <Grid
             container
             spacing={2}
             justifyContent="center"
             alignItems="center"
           >
-            {/* Categories heading on the left */}
             <Grid item xs={12} md={6}>
               <Typography
                 variant="h3"
@@ -92,7 +69,7 @@ function Blogs() {
               >
                 <InputBase
                   sx={{ ml: 1, flex: 1 }}
-                  placeholder="Search about blog or catagories..."
+                  placeholder="Search about blog or categories..."
                   inputProps={{ 'aria-label': 'search google maps' }}
                 />
                 <IconButton

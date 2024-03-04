@@ -174,3 +174,35 @@ export const deleteBlog = async (blogId) => {
     throw new Error('Error deleting blog');
   }
 };
+
+export const deleteCategory = async (categoryId) => {
+  try {
+    const response = await fetch(`${BASE_URL}catagories/${categoryId}`, {
+      method: 'DELETE',
+    });
+    console.log(response);
+    if (!response.ok) {
+      throw new Error('Error deleting category');
+    }
+
+    return true; // Indicate success
+  } catch (error) {
+    throw new Error('Error deleting category');
+  }
+};
+
+export const deleteUsers = async (userId) => {
+  try {
+    const response = await fetch(`${BASE_URL}catagories/${userId}`, {
+      method: 'DELETE',
+    });
+    console.log(response);
+    if (!response.ok) {
+      throw new Error('Error deleting user');
+    }
+
+    return true; // Indicate success
+  } catch (error) {
+    throw new Error('Error deleting user');
+  }
+};
